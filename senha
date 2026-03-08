@@ -9,5 +9,3 @@ while senha != 'unifecaf':
 
 if senha == 'unifecaf':
         print('senha correta')
-    else:
-        print('senha incorreta')
