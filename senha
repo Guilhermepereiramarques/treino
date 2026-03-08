@@ -1,0 +1,13 @@
+# Peça a senha ao usuário e continue pedindo até ele digitar: unifecaf
+# - estrutura do while: while condição:
+# - use input para ler a senha
+
+senha = input('senha: ')
+
+while senha != 'unifecaf':
+    senha = input('senha: ')
+
+if senha == 'unifecaf':
+        print('senha correta')
+    else:
+        print('senha incorreta')
