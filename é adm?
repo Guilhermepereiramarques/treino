@@ -1,0 +1,7 @@
+senha = int(input('Digite sua senha: '))
+usuario = int(input("nome de usuario: "))
+
+if usuario == 'adm' and senha == '1234':
+    print('Adm!')
+else:
+    print('usuario comum!')
