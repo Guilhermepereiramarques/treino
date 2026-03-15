@@ -1,0 +1,8 @@
+idade = float(input("idade: "))
+
+if idade < 12:
+    print("criança")
+elif 12 < idade < 18:
+    print("adolecente")
+else:
+    print("adulto")
