@@ -1,0 +1,18 @@
+Numero_1 = float(input())
+Numero_2 = float(input())
+Numero_3 = float(input())
+
+if Numero_1 < Numero_3 and Numero_2 < Numero_3:
+    print( Numero_3, 'é maior' )
+elif Numero_3 < Numero_1 and Numero_2 < Numero_1:
+    print(Numero_1, 'é maior')
+elif Numero_1 < Numero_2 and Numero_3 < Numero_2:
+    print( Numero_2, 'é maior' )
+elif Numero_1 < Numero_3 == Numero_2:
+    print(Numero_2, 'e', Numero_3, 'é maior e o mesmo numero')
+elif Numero_3 < Numero_1 == Numero_2:
+    print(Numero_2, 'e', Numero_1, 'é maior e o mesmo numero')
+elif Numero_2 < Numero_1 == Numero_3:
+    print(Numero_3, 'e', Numero_1, 'é maior e o mesmo numero')
+else:
+    print(Numero_1, 'e', Numero_2, 'e', Numero_3, 'são o mesmo numero')
