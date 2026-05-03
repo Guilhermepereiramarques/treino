@@ -1,0 +1,64 @@
+saldo = 0.0
+extrato = ""
+movimentou = False
+
+
+def depositar():
+    global saldo, extrato, movimentou
+    valor = float(input("Digite o valor do depósito: R$ "))
+
+    if valor > 0:
+        saldo += valor
+        extrato += f"Depósito: R$ {valor:.2f}\n"
+        movimentou = True
+        print("Depósito realizado. ")
+        print(f"Saldo atual: R$ {saldo:.2f}")
+    else:
+        print("valor informado é inválido")
+
+
+def sacar():
+    global saldo, extrato, movimentou
+    valor = float(input("Digite o valor do saque: R$ "))
+
+    if valor > saldo:
+        print("Saldo insuficiente")
+    elif valor > 0:
+        saldo -= valor
+        extrato += f"Saque: R$ {valor:.2f}\n"
+        movimentou = True
+        print("Saque realizado.)")
+        print( f" Saldo atual: R$ {saldo:.2f}")
+    else:
+        print("O valor invalido")
+
+
+def mostrar_extrato():
+    print("===== EXTRATO =====")
+    if movimentou:
+        print(extrato)
+        print(f"Saldo atual: R$ {saldo:.2f}")
+    else:
+        print("Sem movimentação")
+
+
+opcao = ""
+while opcao != "4":
+    print("===== MENU =====")
+    print("1 - Adicionar Dinheiro")
+    print("2 - Sacar Dinheiro")
+    print("3 - Mostrar Extrato")
+    print("4 - Sair")
+
+    opcao = input("escolha uma opção: ")
+
+    if opcao == "1":
+        depositar()
+    elif opcao == "2":
+        sacar()
+    elif opcao == "3":
+        mostrar_extrato()
+    elif opcao == "4":
+        print("Tchau")
+    else:
+        print("Opção inválida!")
