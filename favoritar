@@ -1,5 +1,3 @@
-
-
 def alternar_favorito(id_usuario, id_aula):
     "
     Favoritar aula.
