@@ -1,0 +1,30 @@
+
+
+def alternar_favorito(id_usuario, id_aula):
+    """
+    Favoritar aula.
+    Remover favorito.
+    """
+    db = None
+    try:
+        conexao = conectar_banco()
+        ponteiro = conecutar.cursor()
+        consulta = "SELECT id_favorito FROM favoritos_aulas WHERE id_usuario = %s AND id_aula = %s"
+        ponteiro.execute(consulta, (pessoa_id, aula_id))
+        ja_existe = ponteiro.fetchone()
+
+        if ja_existe:
+            remover_fav = "DELETE FROM favoritos_aulas WHERE id_usuario = %s AND id_aula = %s"
+            ponteiro.execute(remover_fav, (pessoa_id, aula_id))
+            resultado = "removido"
+        else:
+            salvar_fav = "INSERT INTO favoritos_aulas (id_usuario, id_aula) VALUES (%s, %s)"
+            ponteiro.execute(salvar_fav, (pessoa_id, aula_id))
+            resultado = "adicionado"
+
+        conexao.commit()
+        return resultado
+
+    except Error as e:
+        print(f"Erro ao processar favorito: {e}")
+        return "erro"
