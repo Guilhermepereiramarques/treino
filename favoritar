@@ -1,10 +1,10 @@
 
 
 def alternar_favorito(id_usuario, id_aula):
-    """
+    "
     Favoritar aula.
     Remover favorito.
-    """
+    "
     db = None
     try:
         conexao = conectar_banco()
