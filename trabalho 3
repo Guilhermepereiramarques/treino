@@ -9,7 +9,7 @@ def conectar():
             password='root',
             database='projeto_vendas_eletronicos_unifecaf'
         )
-
+# coloquei devoltacomo era para funcionar mehor para corrigir
         if conexao.is_connected():
             print("Conectado ao MySQL com sucesso!")
             return conexao
